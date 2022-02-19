@@ -56,8 +56,8 @@ function App() {
               todayRecovered: r.todayRecovered,
               todayDeaths: r.todayDeaths,
               countryInfo: {
-                lat: 30,
-                long: 50,
+                lat: 20,
+                long: 60,
               },
             },
           ])
@@ -121,17 +121,14 @@ function App() {
               setCaseType={setCurrCaseType}
             />
           )}
-          <Grid>
-            <Map
-              center={mapCenter}
-              countries={countries}
-              caseType={currCaseType}
-            />
-          </Grid>
+          <Map
+            center={mapCenter}
+            countries={countries}
+            caseType={currCaseType}
+          />
         </Grid>
         <Grid item xs={4} className="item-table">
           {countries && <TableInfo countries={cloneDeep(countries)} />}
-          {/*todo: sortData affect normal countries state*/}
         </Grid>
       </Grid>
     </Box>
